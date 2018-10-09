@@ -270,9 +270,9 @@ First we will change our working directory so that we can create new results sub
 in the right location. 
 
 ~~~
-cd ~/dc_workshop/results
+$ cd ~/dc_workshop/results
 ~~~
-{: .output}
+{: .bash}
 
 Next we tell our script where to find the reference genome by assigning the `genome` variable to 
 the path to our reference genome: 
@@ -292,16 +292,16 @@ genome=~/dc_workshop/data/ref_genome/ecoli_rel606.fasta
 Next we index our reference genome for BWA.
 
 ~~~
-bwa index $genome
+$ bwa index $genome
 ~~~
-{: .output}
+{: .bash}
 
 And create the directory structure to store our results in: 
 
 ~~~
-mkdir -p sai sam bam bcf vcf
+$ mkdir -p sai sam bam bcf vcf
 ~~~
-{: .output}
+{: .bash}
 
 We will now use a loop to run the variant calling workflow on each of our FASTQ files. The full list of commands
 within the loop will be executed once for each of the FASTQ files in the `data/trimmed_fastq/` directory. 
@@ -311,10 +311,10 @@ The first thing we do is assign the name of the FASTQ file we're currently worki
 tell the script to `echo` the filename back to us so we can check which file we're on.
 
 ~~~
-for fq in ~/dc_workshop/data/trimmed_fastq_small/*.fastq
-    do
-    echo "working with file $fq"
-    done
+$ for fq in ~/dc_workshop/data/trimmed_fastq_small/*.fastq
+> do
+> echo "working with file $fq"
+> done
 ~~~
 {: .bash}
 
