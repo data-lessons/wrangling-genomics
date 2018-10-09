@@ -187,10 +187,11 @@ SRR2589044_1.trim.fastq.gz  SRR2589044_2.fastq.gz         SRR2589044_2un.trim.fa
 {: .output}
 
 The output file is also a FASTQ file. It should be smaller than our
-input file because we've removed reads. We can confirm this:
+input file because we've removed reads. We can confirm this 
+by running the `ls` command with the `-S` flag to sort by size.
 
 ~~~
-$ ls SRR2589044* -l -h
+$ ls SRR2589044* -l -S
 ~~~
 {: .bash}
 
