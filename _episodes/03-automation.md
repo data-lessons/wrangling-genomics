@@ -32,8 +32,8 @@ each of your data files and makes your work less error-prone and more reproducib
 For example, the variant calling workflow we just carried out had about eight steps
 where we had to type a command into our terminal. Most of these commands were pretty 
 long. If we wanted to do this for all six of our data files, that would be forty-eight
-steps. If we had 50 samples (a more realistic number), it would be 400 steps! You can
-see why we want to automate this.
+steps. If you were working with all 265 samples from our metadata table from the long-term
+evolution study, that would be 2120 commands!
 
 We've also used `for` loops in previous lessons to iterate one or two commands over multiple input files. 
 In these `for` loops, the filename was defined as a variable in the `for` statement, which enabled you to run the loop on multiple files. We will be using variable assignments like this in our new shell scripts.
